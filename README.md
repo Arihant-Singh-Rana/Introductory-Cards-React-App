@@ -15,10 +15,64 @@ This repository contains a simple React application that displays information ab
 ### `App.js`
 
 The main entry point of the application. It imports the necessary components and renders them to display student information. The student data is hardcoded for demonstration purposes.
+Certainly! Here are snippets for each code file:
+
+### `App.js Code Snippet`
+
+```jsx
+import React from "react";
+import "./App.css";
+import Introduction from "./Introduction";
+import Abhijeet from "./material/Abhijeet.jpeg";
+import Adnan from "./material/Adnan.jpeg";
+import Sharad from "./material/Sharad.jpg";
+import Tiwari from "./material/Tiwari.jpg";
+import keshav from "./material/Keshav.jpeg";
+import DK from "./material/DK.jpeg";
+
+function App() {
+  return (
+    <>
+      <div className="Body">
+        <Introduction
+          imgaddress={Abhijeet}
+          name="Abhijeet Khokar"
+          age={18}
+          course="B.Tech CSE"
+        />
+        {/* Additional Introduction components for other students */}
+      </div>
+      <div className="Body">
+        {/* Additional Introduction components for other students */}
+      </div>
+    </>
+  );
+}
+
+export default App;
+```
 
 ### `Introduction.js`
 
 The component responsible for rendering individual student details. It receives props such as image address, name, age, and course.
+
+### `Introduction.js Code Snippet`
+
+```jsx
+import React from "react";
+import "./Introduction.css";
+
+export default function Introduction(intro) {
+  return (
+    <div className="Parent">
+      <img src={intro.imgaddress} alt="Student Pic" />
+      <h1>{intro.name}</h1>
+      <h2>Age: {intro.age}</h2>
+      <h3>Course: {intro.course}</h3>
+    </div>
+  );
+}
+```
 
 ### `Introduction.css`
 
@@ -38,10 +92,4 @@ Feel free to customize the code to add more students or modify the styling. You 
 
 ## Author
 
-This project was created by [Your Name].
-
-## Acknowledgments
-
-Special thanks to the contributors and the React community for their valuable resources and support.
-
-**Note:** Replace [Your Name] with your name in the Author section.
+This project was created by Arihant Singh Rana.
